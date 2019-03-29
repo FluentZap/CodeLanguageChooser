@@ -2,57 +2,28 @@ $(document).ready(function () {
   $("#form-language-test").submit(function (event) {
     event.preventDefault();
     $(".result").hide();
-    let focus = $("input[name=form-frontback]:checked").val();
+
+    var focus = $("input[name=form-focus]:checked").val();
     var platform = $("input[name=form-platform]:checked").val();
     var design = $("#form-design:checked").val();
     var goals = $("input[name=form-goals]:checked").val();
-    var style = $("input[name=form-language]:checked").val();
+    var style = $("input[name=form-style]:checked").val();
     var hobby = $("input[name=form-hobby]:checked").val();
 
     var notdone = false;
 
-    if (focus === undefined)
-    {
-      $("#form-titleFocus").addClass("notAnswered");
-      $("#form-titleFocus").effect('shake');
-      notdone = true;
-    }
-    if (platform === undefined)
-    {
-      $("#form-titlePlatform").addClass("notAnswered");
-      $("#form-titlePlatform").effect('shake');
-      notdone = true;
-    }
-    if (design === undefined)
-    {
-      $("#form-titleDesign").addClass("notAnswered");
-      $("#form-titleDesign").effect('shake');
-      notdone = true;
-    }
-    if (goals === undefined)
-    {
-      $("#form-titleGoals").addClass("notAnswered");
-      $("#form-titleGoals").effect('shake');
-      notdone = true;
-    }
-    if (style === undefined)
-    {
-      $("#form-titleLearning").addClass("notAnswered");
-      $("#form-titleLearning").effect('shake');
-      notdone = true;
-    }
-    if (hobby === undefined)
-    {
-      $("#form-titleHobby").addClass("notAnswered");
-      $("#form-titleHobby").effect('shake');
-      notdone = true;
-    }
+    if (focus === undefined) shakeMeRed("#form-titleFocus"), notdone = true;
+    if (platform === undefined) shakeMeRed("#form-titlePlatform"), notdone = true;
+    if (design === undefined) shakeMeRed("#form-titleDesign"), notdone = true;
+    if (goals === undefined) shakeMeRed("#form-titleGoals"), notdone = true;
+    if (style === undefined) shakeMeRed("#form-titleStyle"), notdone = true;
+    if (hobby === undefined) shakeMeRed("#form-titleHobby"), notdone = true;
 
     if (notdone)
-    {
       return;
-    }
-    console.log("sdsd");
+
+
+
 
     $("#form-language-test").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
       $("body").animate({backgroundColor: "#f27b7b"}, 'slow');
@@ -60,3 +31,12 @@ $(document).ready(function () {
     });
   });
 });
+
+
+
+
+
+function shakeMeRed(toBeShaken) {
+  $(toBeShaken).addClass("notAnswered");
+  $(toBeShaken).effect('shake');
+}
