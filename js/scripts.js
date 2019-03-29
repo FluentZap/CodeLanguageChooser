@@ -1,5 +1,5 @@
 var chosen;
-
+var nextLanguage;
 $(document).ready(function () {
   $("#form-language-test").submit(function (event) {
     event.preventDefault();
@@ -43,22 +43,16 @@ $(document).ready(function () {
     if (hobby === "option2") cSharp += 1, php += 2, ruby += 2, java += 0;
     if (hobby === "option3") cSharp += 1, php += 2, ruby += 2, java += 0;
 
-    if (cSharp >= php && cSharp >= ruby && cSharp >= java) chosen = "#cSharp";
+    if (cSharp >= php && cSharp >= ruby && cSharp >= java) chosen = "#cSharp"
     if (php >= cSharp && php >= ruby && php >= java) chosen = "#php";
     if (ruby >= php && ruby >= cSharp && ruby >= java) chosen = "#ruby";
     if (java >= php && java >= ruby && java >= cSharp) chosen = "#java";
 
-    if (chosen === "#cSharp")
-      color = "#c693c6"
-    else if (chosen === "#php")
-      color = "#a0bcef"
-    else if (chosen === "#ruby")
-      color = "#f27b7b"
-    else if (chosen === "#java")
-      color = "#93785e"
+    nextLanguage = getRandomOption(chosen);
+    $(".otherOption").css("background-color", languageColor(nextLanguage));
 
     $("#quizBox").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
-      $("body").animate({backgroundColor: color}, 'slow');
+      $("body").animate({backgroundColor: languageColor(chosen)}, 'slow');
       $(chosen).toggle("slide", { direction: 'down', mode: 'show'}, 1000);
     });
 
@@ -71,6 +65,17 @@ $(document).ready(function () {
       $("#quizBox").show("slide", { direction: 'up', mode: 'show'}, 1000);
     });
   });
+
+  $(".otherOption").click(function () {
+    $(chosen).hide("slide", { direction: 'left', mode: 'hide'}, 1000, function () {
+      chosen = nextLanguage;
+      nextLanguage = getRandomOption(chosen);
+      $(".otherOption").css("background-color", languageColor(nextLanguage));
+      $("body").animate({backgroundColor: languageColor(chosen)}, 'slow');
+      $(chosen).show("slide", { direction: 'right', mode: 'show'}, 1000);
+    });
+  });
+
 });
 
 function resetForm() {
@@ -93,4 +98,28 @@ function resetForm() {
 function shakeMeRed(toBeShaken) {
   $(toBeShaken).addClass("notAnswered");
   $(toBeShaken).effect('shake');
+}
+
+function languageColor(language) {
+  var color;
+  if (language === "#cSharp")
+    color = "#c693c6"
+  else if (language === "#php")
+    color = "#a0bcef"
+  else if (language === "#ruby")
+    color = "#f27b7b"
+  else if (language === "#java")
+    color = "#93785e"
+  return color;
+}
+
+function getRandomOption(forbidden) {
+  var selection;
+  while (true) {
+    selection = Math.round(Math.random() * 3);
+    if (selection === 0 && forbidden !== "#cSharp") return "#cSharp"
+    if (selection === 1 && forbidden !== "#php") return "#php";
+    if (selection === 2 && forbidden !== "#ruby") return "#ruby";
+    if (selection === 3 && forbidden !== "#java") return "#java";
+  }
 }
