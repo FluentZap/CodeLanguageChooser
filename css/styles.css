@@ -4,7 +4,10 @@ font-family: 'Amiri', serif; */
 body {
   background-color: #bebbbb;
   color: #464655;
+}
 
+.notAnswered {
+  color: red;  
 }
 
 .result {
