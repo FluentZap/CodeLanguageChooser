@@ -21,8 +21,7 @@ $(document).ready(function () {
     if (hobby === undefined) shakeMeRed("#form-titleHobby"), notdone = true;
     if (notdone) return;
 
-    var cSharp = 0, php = 0, ruby = 0, java = 0;
-    var color;
+    var color, cSharp = 0, php = 0, ruby = 0, java = 0;
     // Scale of 0, 1 or 2 as weight for the quesitons
     if (focus === "option1") cSharp += 1, php += 0, ruby += 2, java += 1;
     if (focus === "option2") cSharp += 2, php += 2, ruby += 0, java += 1;
@@ -66,19 +65,12 @@ $(document).ready(function () {
   });
 
   $(".retake").click(function () {
-    //$(element).is(":visible");
-
     $(chosen).hide("fade", { direction: 'down', mode: 'hide'}, 1000, function () {
       $("body").animate({backgroundColor: "#bebbbb"}, 'slow');
       resetForm();
       $("#quizBox").show("slide", { direction: 'up', mode: 'show'}, 1000);
     });
-
-
   });
-
-
-
 });
 
 function resetForm() {
@@ -97,9 +89,6 @@ function resetForm() {
   $('#form-titleStyle').removeClass("notAnswered");
   $('#form-titleHobby').removeClass("notAnswered");
 }
-
-
-
 
 function shakeMeRed(toBeShaken) {
   $(toBeShaken).addClass("notAnswered");

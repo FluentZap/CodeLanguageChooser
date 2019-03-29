@@ -5,6 +5,7 @@ body {
   background-color: #bebbbb;
   color: #464655;
 }
+
 h1 {
   text-align: center;
   font-size: 60px;
@@ -14,6 +15,11 @@ h1 {
   line-height: 110px;
 }
 
+img {
+  width: 50%;
+  padding: 20px;
+}
+
 .notAnswered {
   color: red;
 }
@@ -21,18 +27,6 @@ h1 {
 .result {
   display: none;
   padding-bottom: 90px;
-}
-
-#form-language-test {
-  border-left: 4px solid #AAAAAA;
-  padding: 20px;
-  border-radius: 25px;
-  background-color: #FBFEFB;
-}
-
-img {
-  width: 50%;
-  padding: 20px;
 }
 
 .result h1 {
@@ -46,4 +40,12 @@ img {
 .result p {
   font-family: 'Amiri', serif;
   color: #edf2f4;
+  font-size: 18px;
+}
+
+#form-language-test {
+  border-left: 4px solid #AAAAAA;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: #FBFEFB;
 }
