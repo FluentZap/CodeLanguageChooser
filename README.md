@@ -1,6 +1,6 @@
 # _Coder Quiz_
 
-#####By _**Nathan Aden**_
+##### By _**Nathan Aden**_
 
 ## Description
 
@@ -9,7 +9,8 @@ _A quiz that will recommend a programing language to learn based on weighted que
 ## Setup/Installation Requirements
 
 * _Clone and run in any web browser_
-
+* _Run website through the gh-pages link provided_
+  https://fluentzap.github.io/CodeLanguageChooser/
 ## Known Bugs
 
 _None at this time_
