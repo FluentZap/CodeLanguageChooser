@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Amiri|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
@@ -12,11 +13,42 @@
   </head>
   <body>
     <div class="container">
+      <div class="row justify-content-md-center">
+      <div class="col-md-6">
+        <form id="form-language-test" action="index.html" method="post">
+            <div class="form-check">
+              <h5 for="exampleFormControlSelect1">What side of programing do you want to focus on?</h5>
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Front end (Coding sleek and intuitive UI)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Back end (Coding how the logic works behind the scenes)
+              </label>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="result" id="ruby">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <img src="img/ruby.png" alt="A ruby" class="mx-auto d-block">
+          </div>
+        </div>
 
+        <div class="row justify-content-md-center">
+          <div class="col-md-4">
+            <h1>Ruby!</h1>
+            <p>Text about doing things!</p>
+          </div>
+        </div>
+      </div>
 
-
-
-      
     </div>
   </body>
 </html>
