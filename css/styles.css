@@ -7,7 +7,7 @@ body {
 }
 
 .notAnswered {
-  color: red;  
+  color: red;
 }
 
 .result {
@@ -21,11 +21,6 @@ body {
   background-color: #FBFEFB;
 }
 
-
-.btn {
-
-}
-
 img {
   width: 50%;
   padding: 20px;
@@ -36,6 +31,7 @@ img {
   text-align: center;
   font-family: 'Indie Flower', cursive;
   color: #edf2f4;
+  padding-bottom: 30px;
 }
 
 .result p {
