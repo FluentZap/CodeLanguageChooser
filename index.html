@@ -1,54 +1,149 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Amiri|Indie+Flower" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
-    <script src="js/jquery-ui.js" type="text/javascript"></script>
-    <script src="js/bootstrap.js" type="text/javascript"></script>
-    <script src="js/scripts.js" type="text/javascript"></script>
-    <title>Language of choice</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row justify-content-md-center">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.js" type="text/javascript"></script>
+  <script src="js/bootstrap.js" type="text/javascript"></script>
+  <script src="js/scripts.js" type="text/javascript"></script>
+  <title>Language of choice</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-md-center">
       <div class="col-md-6">
         <form id="form-language-test" action="index.html" method="post">
+          <div class="form-group">
             <div class="form-check">
-              <h5 for="exampleFormControlSelect1">What side of programing do you want to focus on?</h5>
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <h5>What side of programing do you want to focus on?</h5>
+              <input class="form-check-input" type="radio" name="form-frontback" id="form-frontend" value="option1">
               <label class="form-check-label" for="exampleRadios1">
                 Front end (Coding sleek and intuitive UI)
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <input class="form-check-input" type="radio" name="form-frontback" id="form-backend" value="option2">
               <label class="form-check-label" for="exampleRadios2">
                 Back end (Coding how the logic works behind the scenes)
               </label>
             </div>
             <hr>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
-        </div>
-      </div>
-      <div class="result" id="ruby">
-        <div class="row justify-content-md-center">
-          <div class="col-md-auto">
-            <img src="img/ruby.png" alt="A ruby" class="mx-auto d-block">
-          </div>
-        </div>
+            <div class="form-check">
+              <h5>What platform would you like to work on?</h5>
+              <input class="form-check-input" type="radio" name="form-platform" id="form-webbased" value="option1">
+              <label class="form-check-label" for="exampleRadios1">
+                Web based
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-platform" id="form-application" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Application
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-platform" id="form-mobile" value="option3">
+              <label class="form-check-label" for="exampleRadios2">
+                Mobile
+              </label>
+            </div>
+            <hr>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="form-design">
+              <label class="form-check-label" for="form-design">
+                I want design to be a large part of my career.
+              </label>
+            </div>
+            <hr>
 
-        <div class="row justify-content-md-center">
-          <div class="col-md-4">
-            <h1>Ruby</h1>
-            <p>Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. Ruby became popular because the Rails framework, which is written with Ruby, simplified many of the common tasks associated with building web applications. It's most popular with startups and smaller companies who are looking to build their product quickly.</p>
-          </div>
-        </div>
-      </div>
+            <div class="form-check">
+              <h5>Which of the following most describes your goals?</h5>
+              <input class="form-check-input" type="radio" name="form-goals" id="form-rapid" value="option1">
+              <label class="form-check-label" for="exampleRadios1">
+                I want to rapidly devolop my ideas and turn them into market ready products.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-goals" id="form-control" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                I want to have a high level of control over my code. It might take more time to devlop an idea but it will be easier to support.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-goals" id="form-flexable" value="option3">
+              <label class="form-check-label" for="exampleRadios2">
+                I want to be able to use the resources that others have made and attach my own code as i see fit. I will have a balance between speed and control.
+              </label>
+            </div>
+            <hr>
+            <div class="form-check">
+              <h5>Which of the following most describes your learning style?</h5>
+              <input class="form-check-input" type="radio" name="form-language" id="form-master" value="option1">
+              <label class="form-check-label" for="exampleRadios1">
+                I want to master one language and then learn languages that are similar.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-language" id="form-all" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                I want to get a general knowlage off all languages so i can be more flexable.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-language" id="form-two" value="option3">
+              <label class="form-check-label" for="exampleRadios2">
+                I want to focus on two differnt languages that interact with each other and get proficent in them.
+              </label>
+            </div>
+            <hr>
+            <div class="form-check">
+              <h5>In your spare time what type of project would you work on?</h5>
+              <input class="form-check-input" type="radio" name="form-hobby" id="form-videogame" value="option1">
+              <label class="form-check-label" for="exampleRadios1">
+                A video game that i could play along or with friends.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-hobby" id="form-storefront" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                A website that could act as a storefront for a hobby i have.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="form-hobby" id="form-server" value="option3">
+              <label class="form-check-label" for="exampleRadios2">
+                A server program to keep all my movies and music organized.
+              </label>
+            </div>
 
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
     </div>
-  </body>
+    <div class="result" id="ruby">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <img src="img/ruby.png" alt="A ruby" class="mx-auto d-block">
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-md-4">
+          <h1>Ruby</h1>
+          <p>Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. Ruby
+            became popular because the Rails framework, which is written with Ruby, simplified many of the common tasks associated with building web applications. It's most popular with startups and smaller companies who are looking to build their
+            product quickly.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>

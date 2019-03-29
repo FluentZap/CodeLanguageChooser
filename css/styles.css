@@ -2,7 +2,7 @@
 font-family: 'Amiri', serif; */
 
 body {
-  background-color: #edf2f4;
+  background-color: #bebbbb;
   color: #464655;
 
 }
@@ -11,11 +11,11 @@ body {
   display: none;
 }
 
-#form-language-test {  
+#form-language-test {
   border-left: 4px solid #AAAAAA;
   padding: 20px;
   border-radius: 25px;
-  background-color: #edf2f4;
+  background-color: #FBFEFB;
 }
 
 
