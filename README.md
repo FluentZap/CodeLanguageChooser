@@ -13,7 +13,7 @@ _A quiz that will recommend a programing language to learn based on weighted que
   https://fluentzap.github.io/CodeLanguageChooser/
 ## Known Bugs
 
-_None at this time_
+_Currently it bugs out when displaying two columns_
 
 ## Support and contact details
 

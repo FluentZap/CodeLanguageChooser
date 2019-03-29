@@ -19,7 +19,7 @@ $(document).ready(function () {
     if (goals === undefined) shakeMeRed("#form-titleGoals"), notdone = true;
     if (style === undefined) shakeMeRed("#form-titleStyle"), notdone = true;
     if (hobby === undefined) shakeMeRed("#form-titleHobby"), notdone = true;
-    if (notdone) return;
+    //if (notdone) return;
 
     var color, cSharp = 0, php = 0, ruby = 0, java = 0;
     // Scale of 0, 1 or 2 as weight for the quesitons
@@ -57,10 +57,19 @@ $(document).ready(function () {
     else if (chosen === "#java")
       color = "#93785e"
 
-    $("#quizBox").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
-      $("body").animate({backgroundColor: color}, 'slow');
-      $(chosen).toggle("slide", { direction: 'down', mode: 'show'}, 1000);
-    });
+
+    //$("#quizBox").hide("fade", { direction: 'up', mode: 'hide'}, 100);
+    $("#quizBox").hide();
+    $("#result-left").html($("#php").html());
+    $("#result-right").html($("#ruby").html());
+
+    $("#result-left").toggle("slide", { direction: 'up', mode: 'show'}, 1000);
+    $("#result-right").toggle("slide", { direction: 'up', mode: 'show'}, 1000);
+
+    // $("#quizBox").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
+    //   $("body").animate({backgroundColor: color}, 'slow');
+    //   $(chosen).toggle("slide", { direction: 'down', mode: 'show'}, 1000);
+    // });
 
   });
 
