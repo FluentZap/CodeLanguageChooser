@@ -58,7 +58,7 @@ $(document).ready(function () {
     else if (chosen === "#java")
       color = "#93785e"
 
-    $("#form-language-test").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
+    $("#quizBox").toggle("fade", { direction: 'up', mode: 'hide'}, 1000, function () {
       $("body").animate({backgroundColor: color}, 'slow');
       $(chosen).toggle("slide", { direction: 'down', mode: 'show'}, 1000);
     });
@@ -71,7 +71,7 @@ $(document).ready(function () {
     $(chosen).hide("fade", { direction: 'down', mode: 'hide'}, 1000, function () {
       $("body").animate({backgroundColor: "#bebbbb"}, 'slow');
       resetForm();
-      $("#form-language-test").show("slide", { direction: 'up', mode: 'show'}, 1000);
+      $("#quizBox").show("slide", { direction: 'up', mode: 'show'}, 1000);
     });
 
 
